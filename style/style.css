@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  font-weight: bolder;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: space-between;
+  background-image: url("./img/back2.jpg");
+  background-repeat: no-repeat;
+  background-position: 100% -10px;
+  width: 100vw;
+  height: 100vh;
+  min-width: 1200px;
+}
+#app header #header-row-warp {
+  padding: 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+#app header #header-row-warp #header-right-icon-warp:hover {
+  transition: 1s;
+  transform: scale(1.25);
+}
+#app header #header-row-warp #header-right-icon-warp svg {
+  cursor: pointer;
+}
+#app main #main-page-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#app main #main-page-section #main-page-left-words {
+  padding-left: 40px;
+  min-width: 25vw;
+  word-wrap: break-word;
+  width: 500px;
+}
+#app main #main-page-section #main-page-left-words #title {
+  font-size: 50px;
+  font-weight: bolder;
+}
+#app main #main-page-section #main-page-left-words .section-page {
+  font-size: 40px;
+}
+#app main #main-page-section #login-box-warp {
+  width: 400px;
+  height: 500px;
+  min-width: 24vw;
+  min-height: 20vh;
+  margin-right: 160px;
+  border-radius: 15px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  border-left: 2px solid rgba(255, 255, 255, 0.4);
+  background: linear-gradient(to top right, rgba(90, 149, 207, 0.5), rgba(58, 76, 99, 0.8));
+  box-shadow: 10px -10px 20px rgba(0, 0, 0, 0.2), -10px 10px 20px rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+#app main #main-page-section #login-box-warp #login-box-content {
+  padding-left: 40px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+#app main #main-page-section #login-box-warp #login-box-content .loggin-content-warp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+#app main #main-page-section #login-box-warp #login-box-content .loggin-content-warp input {
+  border-radius: 6px;
+  height: 30px;
+  outline: none;
+  padding: 10px;
+  border: none;
+  box-shadow: none;
+  color: black;
+}
+#app main #main-page-section #login-box-warp #login-box-content .loggin-content-warp input:focus {
+  border: none;
+  outline: 3px solid #0084ff;
+}
+#app main #main-page-section #login-box-warp #login-box-content .loggin-content-warp span {
+  padding-right: 30px;
+  font-size: larger;
+}
+#app main #main-page-section #login-box-warp #login-btn {
+  align-self: center;
+  height: 30px;
+  width: 289.33px;
+}
+#app main #main-page-section #login-box-warp #login-btn #login-btn-warp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+#app main #main-page-section #login-box-warp #login-btn #login-btn-warp button {
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  padding: 4px;
+  color: #0f82ec;
+  background-color: rgba(255, 255, 255, 0.5);
+  flex-basis: 289.33px;
+  cursor: pointer;
+}
+#app main #main-page-section #login-box-warp #login-btn #login-btn-warp button span {
+  color: inherit;
+}
+#app main #main-page-section #login-box-warp #login-btn #login-btn-warp button img {
+  -webkit-animation: loading 2s linear infinite;
+          animation: loading 2s linear infinite;
+}
+@-webkit-keyframes loading {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#app footer #footer-row-warp {
+  padding: 40px;
+  position: relative;
+}
+#app footer #footer-row-warp #footer-row-left-warp {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 10vw;
+  max-width: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#app footer #footer-row-warp #footer-row-left-warp svg {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

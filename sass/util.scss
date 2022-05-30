@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@mixin commonFlexLayOut($direction) {
+    display: flex;
+    flex-direction: $direction ;
+    @content;
+}
+
+@mixin transformToLarge() {
+    &:hover {
+        transition: 1s;
+        transform: scale(1.25);
+    }
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    color: #ffffff;
+    font-weight: bolder;
+}

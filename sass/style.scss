@@ -1,0 +1,196 @@
+@use 'util';
+
+$commonMaxSize: 40px;
+$commonSize: 30px;
+$light: #ffffff;
+$commonPadding: 20px;
+$commonMaxPading: 40px;
+
+#app {
+    @include util.commonFlexLayOut(column) {
+        align-content: stretch;
+        justify-content: space-between;
+    }
+
+    background: {
+        image: url("./img/back2.jpg");
+        repeat: no-repeat;
+        position: 100% -10px;
+    }
+
+    ;
+    width: 100vw;
+    height: 100vh;
+    min-width: 1200px;
+
+    header {
+        #header-row-warp {
+            padding: $commonMaxPading;
+            user-select: none;
+
+            @include util.commonFlexLayOut(row) {
+                justify-content: space-between;
+                align-content: center;
+            }
+
+            #header-right-icon-warp {
+                @include util.transformToLarge();
+
+                svg {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    main {
+        #main-page-section {
+            @include util.commonFlexLayOut(row) {
+                justify-content: space-between;
+
+            }
+
+            #main-page-left-words {
+                padding-left: $commonMaxPading;
+                min-width: 25vw;
+                word-wrap: break-word;
+                width: 500px;
+
+                #title {
+                    font: {
+                        size: 50px;
+                        weight: bolder;
+                    }
+                }
+
+                .section-page {
+                    font-size: 40px;
+                }
+            }
+
+            #login-box-warp {
+                width: 400px;
+                height: 500px;
+                min-width: 24vw;
+                min-height: 20vh;
+                margin-right: $commonMaxPading*4;
+                border-radius: 15px;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+                border-left: 2px solid rgba(255, 255, 255, 0.4);
+                background: linear-gradient(to top right,
+                        rgba(90, 149, 207, 0.5),
+                        rgba(58, 76, 99, 0.8));
+                box-shadow: 10px -10px 20px rgba(0, 0, 0, 0.2),
+                    -10px 10px 20px rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(6px);
+
+                @include util.commonFlexLayOut(column) {
+                    justify-content: space-around;
+                    align-items: flex-start;
+                }
+
+
+                #login-box-content {
+                    padding-left: $commonMaxPading;
+                    width: max-content;
+
+                    .loggin-content-warp {
+                        @include util.commonFlexLayOut(row) {
+                            justify-content: space-between;
+                        }
+
+                        padding-bottom: 20px;
+
+                        input {
+                            border-radius: 6px;
+                            height: 30px;
+                            outline: none;
+                            padding: 10px;
+                            border: none;
+                            box-shadow: none;
+                            color: black;
+
+                            &:focus {
+                                border: none;
+                                outline: 3px solid #0084ff;
+                            }
+                        }
+
+                        span {
+                            padding-right: 30px;
+                            font-size: larger;
+                        }
+                    }
+                }
+
+                #login-btn {
+                    align-self: center;
+                    height: 30px;
+                    width: 289.33px;
+
+                    #login-btn-warp {
+                        @include util.commonFlexLayOut(row) {
+                            justify-content: center;
+                            align-items: stretch;
+                        }
+
+                        button {
+                            border-radius: 6px;
+                            border: none;
+                            outline: none;
+                            font-size: 15px;
+                            padding: 4px;
+                            color: #0f82ec;
+                            background-color: rgba($color: $light, $alpha: 0.5);
+                            flex-basis: 289.33px;
+                            cursor: pointer;
+
+                            span {
+                                color: inherit
+                            }
+
+                            img {
+                                animation: loading 2s linear infinite;
+
+                                @keyframes loading {
+                                    from {
+                                        transform: rotate(0);
+                                    }
+
+                                    to {
+                                        transform: rotate(360deg);
+                                    }
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    footer {
+        #footer-row-warp {
+            padding: $commonMaxPading;
+            position: relative;
+
+            #footer-row-left-warp {
+                position: absolute;
+                bottom: 40px;
+                left: 40px;
+                width: 10vw;
+                max-width: 150px;
+
+                @include util.commonFlexLayOut(row) {
+                    justify-content: space-between;
+                }
+
+                svg {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
